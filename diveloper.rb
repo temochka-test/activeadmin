@@ -86,7 +86,8 @@ class Diveloper
 end
 
 OpenSSL::SSL.send(:remove_const, :VERIFY_PEER)
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+OpenSSL::SSL.const_set(:VERIFY_PEER, OpenSSL::SSL::VERIFY_NONE)
+
 puts "Diveloping..."
 diveloper = Diveloper.new('.')
 client = WebhookClient.new('https://artem.dploy.vm/webhook/77ba84aed7f1605aa7bc8e039be39c2e47defc76af2ea36f')
