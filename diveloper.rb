@@ -10,7 +10,7 @@ class WebhookClient
   end
 
   def fire
-    @http.post(@url.path)
+    @http.post(@url.path, nil)
   end
 end
 
