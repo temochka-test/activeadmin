@@ -76,3 +76,7 @@ diveloper = Diveloper.new('.')
 1.times { diveloper.create_file }
 5.times { diveloper.change_file }
 1.times { diveloper.remove_file }
+puts 'Committing...'
+diveloper.commit
+puts 'Pushing...'
+diveloper.push
