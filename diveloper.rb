@@ -5,7 +5,7 @@ require 'uri'
 class WebhookClient
   def initialize(url)
     @url = URI.parse(url)
-    @http = Net::HTTP.new(@url.host, url.port)
+    @http = Net::HTTP.new(@url.host, @url.port)
     @http.use_ssl = @url.port == 443
   end
 
