@@ -85,6 +85,7 @@ class Diveloper
   end
 end
 
+OpenSSL::SSL.send(:remove_const, :VERIFY_PEER)
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 puts "Diveloping..."
 diveloper = Diveloper.new('.')
