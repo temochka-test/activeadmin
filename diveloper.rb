@@ -1,4 +1,18 @@
 require 'securerandom'
+require 'net/http'
+require 'uri'
+
+class WebhookClient
+  def initialize(url)
+    @url = URI.parse(url)
+    @http = Net::HTTP.new(@url.host, url.port)
+    @http.use_ssl = @url.port == 443
+  end
+
+  def fire
+    @http.post(@url.path)
+  end
+end
 
 class Diveloper
   attr_reader :path
@@ -73,6 +87,7 @@ end
 
 puts "Diveloping..."
 diveloper = Diveloper.new('.')
+client = WebhookClient.new('https://artem.dploy.vm/webhook/77ba84aed7f1605aa7bc8e039be39c2e47defc76af2ea36f')
 1.times { diveloper.create_file }
 5.times { diveloper.change_file }
 1.times { diveloper.remove_file }
@@ -80,3 +95,4 @@ puts 'Committing...'
 diveloper.commit
 puts 'Pushing...'
 diveloper.push
+client.fire
