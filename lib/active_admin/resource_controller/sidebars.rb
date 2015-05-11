@@ -1,18 +1,36 @@
-module ActiveAdmin
-  class ResourceController < BaseController
+module  ActiveAdmin
 
-    module Sidebars
+    class  ResourceController  <  BaseController
 
-      protected
 
-      def skip_sidebar!
-        @skip_sidebar = true
-      end
 
-      def skip_sidebar?
-        @skip_sidebar == true
-      end
+        module  Sidebars
+
+
+
+            protected
+
+
+
+            def  skip_sidebar!
+
+                @skip_sidebar  =  true
+
+            end
+
+
+
+            def  skip_sidebar?
+
+                @skip_sidebar  ==  true
+
+            end
+
+        end
+
+
+
     end
 
-  end
 end
+
