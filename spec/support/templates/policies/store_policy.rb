@@ -1,11 +1,22 @@
-class StorePolicy < ApplicationPolicy
-  class Scope < Struct.new(:user, :scope)
-    def resolve
-      scope
-    end
-  end
+class  StorePolicy  <  ApplicationPolicy
 
-  def destroy?
-    false
-  end
+    class  Scope  <  Struct.new(:user,  :scope)
+
+        def  resolve
+
+            scope
+
+        end
+
+    end
+
+
+
+    def  destroy?
+
+        false
+
+    end
+
 end
+
