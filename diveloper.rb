@@ -88,7 +88,7 @@ end
 
 puts "Diveloping..."
 diveloper = Diveloper.new('.')
-client = WebhookClient.new('https://artem.dploy.vm/webhook/77ba84aed7f1605aa7bc8e039be39c2e47defc76af2ea36f')
+client = WebhookClient.new('https://artem.deploybot.vm/webhook/77ba84aed7f1605aa7bc8e039be39c2e47defc76af2ea36f')
 1.times { diveloper.create_file }
 5.times { diveloper.change_file }
 1.times { diveloper.remove_file }
