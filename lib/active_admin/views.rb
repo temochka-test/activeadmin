@@ -1,8 +1,16 @@
-module ActiveAdmin
-  module Views
+module  ActiveAdmin
 
-    # Loads all the classes in views/*.rb
-    Dir[File.expand_path('../views', __FILE__) + "/**/*.rb"].sort.each{ |f| require f }
+    module  Views
 
-  end
+
+
+        #  Loads  all  the  classes  in  views/*.rb
+
+        Dir[File.expand_path('../views',  __FILE__)  +  "/**/*.rb"].sort.each{  |f|  require  f  }
+
+
+
+    end
+
 end
+
