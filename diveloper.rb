@@ -24,7 +24,7 @@ class Diveloper
 
   def commit
     `git add -A`
-    `git commit -a -m "#{ARGV.first || generate_commit_message}"`
+    `git commit --author "Ilya Sabanin <ilya@wildbit.com>" -a -m "#{ARGV.first || generate_commit_message}"`
   end
 
   def push
