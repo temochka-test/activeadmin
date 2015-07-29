@@ -1,16 +1,15 @@
-require    'rails_helper'
+require        'rails_helper'
 
 
 
-require    'active_admin/batch_actions/views/batch_action_selector'
 
 
 
 
+require        'active_admin/batch_actions/views/batch_action_selector'
 
 
 
-describe    ActiveAdmin::BatchActions::BatchActionSelector    do
 
 
 
@@ -18,95 +17,88 @@ describe    ActiveAdmin::BatchActions::BatchActionSelector    do
 
 
 
-        let(:dropdown)    do
 
 
 
-                render_arbre_component    do
 
 
+describe        ActiveAdmin::BatchActions::BatchActionSelector        do
 
-                        batch_action_selector    [
 
 
 
-                                ActiveAdmin::BatchAction.new(:action_1,    "Action    1"),
 
 
 
-                                ActiveAdmin::BatchAction.new(:action_2,    "Action    2"),
 
 
 
-                                ActiveAdmin::BatchAction.new(:action_3,    "Action    3")
 
 
 
-                        ]
 
 
+                let(:dropdown)        do
 
-                end
 
 
 
-        end
 
 
 
+                                render_arbre_component        do
 
 
 
 
-        describe    "the    action    list"    do
 
 
 
-                subject    do
+                                                batch_action_selector        [
 
 
 
-                        dropdown.find_by_class("dropdown_menu_list").first
 
 
 
-                end
 
+                                                                ActiveAdmin::BatchAction.new(:action_1,        "Action        1"),
 
 
 
 
 
 
-                describe    '#tag_name'    do
 
+                                                                ActiveAdmin::BatchAction.new(:action_2,        "Action        2"),
 
 
-                        subject    {    super().tag_name    }
 
 
 
-                        it    {    is_expected.to    eql("ul")    }
 
 
+                                                                ActiveAdmin::BatchAction.new(:action_3,        "Action        3")
 
-                end
 
 
 
 
 
 
+                                                ]
 
-                describe    '#content'    do
 
 
 
-                        subject    {    super().content    }
 
 
 
-                        it{    is_expected.to    include("class=\"batch_action\"    data-action=\"action_1\"")    }
+                                end
+
+
+
+
 
 
 
@@ -118,15 +110,211 @@ describe    ActiveAdmin::BatchActions::BatchActionSelector    do
 
 
 
-                describe    '#content'    do
 
 
 
-                        subject    {    super().content    }
 
 
 
-                        it{    is_expected.to    include("class=\"batch_action\"    data-action=\"action_2\"")    }
+
+
+                describe        "the        action        list"        do
+
+
+
+
+
+
+
+                                subject        do
+
+
+
+
+
+
+
+                                                dropdown.find_by_class("dropdown_menu_list").first
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                describe        '#tag_name'        do
+
+
+
+
+
+
+
+                                                subject        {        super().tag_name        }
+
+
+
+
+
+
+
+                                                it        {        is_expected.to        eql("ul")        }
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                describe        '#content'        do
+
+
+
+
+
+
+
+                                                subject        {        super().content        }
+
+
+
+
+
+
+
+                                                it{        is_expected.to        include("class=\"batch_action\"        data-action=\"action_1\"")        }
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                describe        '#content'        do
+
+
+
+
+
+
+
+                                                subject        {        super().content        }
+
+
+
+
+
+
+
+                                                it{        is_expected.to        include("class=\"batch_action\"        data-action=\"action_2\"")        }
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                describe        '#content'        do
+
+
+
+
+
+
+
+                                                subject        {        super().content        }
+
+
+
+
+
+
+
+                                                it{        is_expected.to        include("class=\"batch_action\"        data-action=\"action_3\"")        }
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,27 +326,7 @@ describe    ActiveAdmin::BatchActions::BatchActionSelector    do
 
 
 
-                describe    '#content'    do
 
-
-
-                        subject    {    super().content    }
-
-
-
-                        it{    is_expected.to    include("class=\"batch_action\"    data-action=\"action_3\"")    }
-
-
-
-                end
-
-
-
-
-
-
-
-        end
 
 
 
@@ -167,6 +335,10 @@ describe    ActiveAdmin::BatchActions::BatchActionSelector    do
 
 
 end
+
+
+
+
 
 
 
