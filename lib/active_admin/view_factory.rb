@@ -1,4 +1,4 @@
-require    'active_admin/abstract_view_factory'
+require        'active_admin/abstract_view_factory'
 
 
 
@@ -6,91 +6,79 @@ require    'active_admin/abstract_view_factory'
 
 
 
-module    ActiveAdmin
 
 
 
-        class    ViewFactory    <    AbstractViewFactory
 
 
 
 
 
+module        ActiveAdmin
 
 
-                #    Register    Helper    Renderers
 
 
 
-                register        global_navigation:            ActiveAdmin::Views::TabbedNavigation,
 
 
+                class        ViewFactory        <        AbstractViewFactory
 
-                                                        utility_navigation:        ActiveAdmin::Views::TabbedNavigation,
 
 
 
-                                                        site_title:                                        ActiveAdmin::Views::SiteTitle,
 
 
 
-                                                        unsupported_browser:    ActiveAdmin::Views::UnsupportedBrowser,
 
 
 
-                                                        action_items:                                ActiveAdmin::Views::ActionItems,
 
 
 
-                                                        title_bar:                                            ActiveAdmin::Views::TitleBar,
 
 
+                                #        Register        Helper        Renderers
 
-                                                        header:                                                        ActiveAdmin::Views::Header,
 
 
 
-                                                        footer:                                                        ActiveAdmin::Views::Footer,
 
 
 
-                                                        index_scopes:                                ActiveAdmin::Views::Scopes,
+                                register                global_navigation:                        ActiveAdmin::Views::TabbedNavigation,
 
 
 
-                                                        blank_slate:                                    ActiveAdmin::Views::BlankSlate
 
 
 
 
+                                                                                                                utility_navigation:                ActiveAdmin::Views::TabbedNavigation,
 
 
 
-                #    Register    All    The    Pages
 
 
 
-                register        index_page:    ActiveAdmin::Views::Pages::Index,
 
+                                                                                                                site_title:                                                                                ActiveAdmin::Views::SiteTitle,
 
 
-                                                        show_page:        ActiveAdmin::Views::Pages::Show,
 
 
 
-                                                        new_page:            ActiveAdmin::Views::Pages::Form,
 
 
+                                                                                                                unsupported_browser:        ActiveAdmin::Views::UnsupportedBrowser,
 
-                                                        edit_page:        ActiveAdmin::Views::Pages::Form,
 
 
 
-                                                        layout:                    ActiveAdmin::Views::Pages::Layout,
 
 
 
-                                                        page:                            ActiveAdmin::Views::Pages::Page
+                                                                                                                action_items:                                                                ActiveAdmin::Views::ActionItems,
 
 
 
@@ -98,11 +86,131 @@ module    ActiveAdmin
 
 
 
-        end
+                                                                                                                title_bar:                                                                                        ActiveAdmin::Views::TitleBar,
+
+
+
+
+
+
+
+                                                                                                                header:                                                                                                                ActiveAdmin::Views::Header,
+
+
+
+
+
+
+
+                                                                                                                footer:                                                                                                                ActiveAdmin::Views::Footer,
+
+
+
+
+
+
+
+                                                                                                                index_scopes:                                                                ActiveAdmin::Views::Scopes,
+
+
+
+
+
+
+
+                                                                                                                blank_slate:                                                                        ActiveAdmin::Views::BlankSlate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                #        Register        All        The        Pages
+
+
+
+
+
+
+
+                                register                index_page:        ActiveAdmin::Views::Pages::Index,
+
+
+
+
+
+
+
+                                                                                                                show_page:                ActiveAdmin::Views::Pages::Show,
+
+
+
+
+
+
+
+                                                                                                                new_page:                        ActiveAdmin::Views::Pages::Form,
+
+
+
+
+
+
+
+                                                                                                                edit_page:                ActiveAdmin::Views::Pages::Form,
+
+
+
+
+
+
+
+                                                                                                                layout:                                        ActiveAdmin::Views::Pages::Layout,
+
+
+
+
+
+
+
+                                                                                                                page:                                                        ActiveAdmin::Views::Pages::Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                end
+
+
+
+
 
 
 
 end
+
+
+
+
 
 
 
