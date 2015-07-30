@@ -1,4 +1,4 @@
-require    'rails_helper'
+require        'rails_helper'
 
 
 
@@ -6,7 +6,6 @@ require    'rails_helper'
 
 
 
-describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
@@ -14,31 +13,27 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        let(:helpers){    mock_action_view    }
 
+describe        ActiveAdmin::Views::SiteTitle        do
 
 
 
 
 
 
-        def    build_title(namespace)
 
 
 
-                render_arbre_component({namespace:    namespace},    helpers)    do
 
 
 
-                        insert_tag    ActiveAdmin::Views::SiteTitle,    assigns[:namespace]
 
 
 
-                end
+                let(:helpers){        mock_action_view        }
 
 
 
-        end
 
 
 
@@ -46,83 +41,40 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        context    "when    a    value"    do
 
 
 
 
 
+                def        build_title(namespace)
 
 
-                it    "renders    the    string    when    a    string    is    passed    in"    do
 
 
 
-                        namespace    =    double    site_title:    "Hello    World",
 
 
+                                render_arbre_component({namespace:        namespace},        helpers)        do
 
-                                                                                                    site_title_image:    nil,
 
 
 
-                                                                                                    site_title_link:    nil
 
 
 
+                                                insert_tag        ActiveAdmin::Views::SiteTitle,        assigns[:namespace]
 
 
 
 
-                        site_title    =    build_title(namespace)
 
 
 
-                        expect(site_title.content).to    eq    "Hello    World"
+                                end
 
 
 
-                end
 
-
-
-
-
-
-
-                it    "renders    the    return    value    of    a    method    when    a    symbol"    do
-
-
-
-                        expect(helpers).to    receive(:hello_world).and_return("Hello    World")
-
-
-
-
-
-
-
-                        namespace    =    double    site_title:    :hello_world,
-
-
-
-                                                                                                    site_title_image:    nil,
-
-
-
-                                                                                                    site_title_link:    nil
-
-
-
-
-
-
-
-                        site_title    =    build_title(namespace)
-
-
-
-                        expect(site_title.content).to    eq    "Hello    World"
 
 
 
@@ -134,19 +86,6 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                it    "renders    the    return    value    of    a    proc"    do
-
-
-
-                        namespace    =    double    site_title:    proc{    "Hello    World"    },
-
-
-
-                                                                                                    site_title_image:    nil,
-
-
-
-                                                                                                    site_title_link:    nil
 
 
 
@@ -154,11 +93,252 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                        site_title    =    build_title(namespace)
+
+                context        "when        a        value"        do
 
 
 
-                        expect(site_title.content).to    eq    "Hello    World"
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "renders        the        string        when        a        string        is        passed        in"        do
+
+
+
+
+
+
+
+                                                namespace        =        double        site_title:        "Hello        World",
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_image:        nil,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_link:        nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                site_title        =        build_title(namespace)
+
+
+
+
+
+
+
+                                                expect(site_title.content).to        eq        "Hello        World"
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "renders        the        return        value        of        a        method        when        a        symbol"        do
+
+
+
+
+
+
+
+                                                expect(helpers).to        receive(:hello_world).and_return("Hello        World")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                namespace        =        double        site_title:        :hello_world,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_image:        nil,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_link:        nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                site_title        =        build_title(namespace)
+
+
+
+
+
+
+
+                                                expect(site_title.content).to        eq        "Hello        World"
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "renders        the        return        value        of        a        proc"        do
+
+
+
+
+
+
+
+                                                namespace        =        double        site_title:        proc{        "Hello        World"        },
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_image:        nil,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_link:        nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                site_title        =        build_title(namespace)
+
+
+
+
+
+
+
+                                                expect(site_title.content).to        eq        "Hello        World"
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,7 +350,6 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        end
 
 
 
@@ -178,7 +357,8 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        context    "when    an    image"    do
+
+                context        "when        an        image"        do
 
 
 
@@ -186,19 +366,6 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                it    "renders    the    string    when    a    string    is    passed    in"    do
-
-
-
-                        expect(helpers).to    receive(:image_tag).
-
-
-
-                                with("an/image.png",    alt:    nil,    id:    "site_title_image").
-
-
-
-                                and_return    '<img    src="/assets/an/image.png"    />'.html_safe
 
 
 
@@ -206,15 +373,8 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                        namespace    =    double    site_title:    nil,
 
-
-
-                                                                                                    site_title_image:    "an/image.png",
-
-
-
-                                                                                                    site_title_link:    nil
+                                it        "renders        the        string        when        a        string        is        passed        in"        do
 
 
 
@@ -222,11 +382,99 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                        site_title    =    build_title(namespace)
+                                                expect(helpers).to        receive(:image_tag).
 
 
 
-                        expect(site_title.content.strip).to    eq    '<img    src="/assets/an/image.png"    />'
+
+
+
+
+                                                                with("an/image.png",        alt:        nil,        id:        "site_title_image").
+
+
+
+
+
+
+
+                                                                and_return        '<img        src="/assets/an/image.png"        />'.html_safe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                namespace        =        double        site_title:        nil,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_image:        "an/image.png",
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_link:        nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                site_title        =        build_title(namespace)
+
+
+
+
+
+
+
+                                                expect(site_title.content.strip).to        eq        '<img        src="/assets/an/image.png"        />'
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -238,7 +486,6 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        end
 
 
 
@@ -246,7 +493,8 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        context    "when    a    link    is    present"    do
+
+                context        "when        a        link        is        present"        do
 
 
 
@@ -254,19 +502,6 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                it    "renders    the    string    when    a    string    is    passed    in"    do
-
-
-
-                        namespace    =    double    site_title:    "Hello    World",
-
-
-
-                                                                                                    site_title_image:    nil,
-
-
-
-                                                                                                    site_title_link:    "/"
 
 
 
@@ -274,11 +509,76 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-                        site_title    =    build_title(namespace)
+
+                                it        "renders        the        string        when        a        string        is        passed        in"        do
 
 
 
-                        expect(site_title.content).to    eq    '<a    href="/">Hello    World</a>'
+
+
+
+
+                                                namespace        =        double        site_title:        "Hello        World",
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_image:        nil,
+
+
+
+
+
+
+
+                                                                                                                                                                                                        site_title_link:        "/"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                site_title        =        build_title(namespace)
+
+
+
+
+
+
+
+                                                expect(site_title.content).to        eq        '<a        href="/">Hello        World</a>'
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -290,7 +590,15 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 
-        end
+
+
+
+
+
+
+
+
+
 
 
 
@@ -307,6 +615,10 @@ describe    ActiveAdmin::Views::SiteTitle    do
 
 
 end
+
+
+
+
 
 
 

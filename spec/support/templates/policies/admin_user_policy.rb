@@ -1,22 +1,44 @@
-class  AdminUserPolicy  <  ApplicationPolicy
+class    AdminUserPolicy    <    ApplicationPolicy
 
-    class  Scope  <  Struct.new(:user,  :scope)
 
-        def  resolve
 
-            scope
+        class    Scope    <    Struct.new(:user,    :scope)
+
+
+
+                def    resolve
+
+
+
+                        scope
+
+
+
+                end
+
+
 
         end
 
-    end
 
 
 
-    def  destroy?
 
-        record  !=  user
 
-    end
+
+        def    destroy?
+
+
+
+                record    !=    user
+
+
+
+        end
+
+
 
 end
+
+
 
