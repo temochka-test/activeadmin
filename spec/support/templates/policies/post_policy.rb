@@ -1,15 +1,30 @@
-class PostPolicy < ApplicationPolicy
-  class Scope < Struct.new(:user, :scope)
-    def resolve
-      scope
+class  PostPolicy  <  ApplicationPolicy
+
+    class  Scope  <  Struct.new(:user,  :scope)
+
+        def  resolve
+
+            scope
+
+        end
+
     end
-  end
 
-  def update?
-    record.author == user
-  end
 
-  def destroy?
-    update?
-  end
+
+    def  update?
+
+        record.author  ==  user
+
+    end
+
+
+
+    def  destroy?
+
+        update?
+
+    end
+
 end
+
