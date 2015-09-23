@@ -1,14 +1,28 @@
-module ActiveAdmin
-  module Comments
+module  ActiveAdmin
 
-    module NamespaceHelper
+    module  Comments
 
-      # Returns true if the namespace allows comments
-      def comments?
-        comments == true
-      end
+
+
+        module  NamespaceHelper
+
+
+
+            #  Returns  true  if  the  namespace  allows  comments
+
+            def  comments?
+
+                comments  ==  true
+
+            end
+
+
+
+        end
+
+
 
     end
 
-  end
 end
+
