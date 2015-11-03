@@ -1,20 +1,40 @@
-ActiveAdmin.register_page    "<%=    class_name    %>"    do
+ActiveAdmin.register_page        "<%=        class_name        %>"        do
 
 
 
-        content    do
 
 
 
-                #    your    content
+
+                content        do
 
 
 
-        end
+
+
+
+
+                                #        your        content
+
+
+
+
+
+
+
+                end
+
+
+
+
 
 
 
 end
+
+
+
+
 
 
 
