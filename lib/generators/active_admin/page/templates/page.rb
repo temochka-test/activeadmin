@@ -1,4 +1,4 @@
-ActiveAdmin.register_page        "<%=        class_name        %>"        do
+ActiveAdmin.register_page                "<%=                class_name                %>"                do
 
 
 
@@ -6,7 +6,6 @@ ActiveAdmin.register_page        "<%=        class_name        %>"        do
 
 
 
-                content        do
 
 
 
@@ -14,7 +13,8 @@ ActiveAdmin.register_page        "<%=        class_name        %>"        do
 
 
 
-                                #        your        content
+
+                                content                do
 
 
 
@@ -22,7 +22,39 @@ ActiveAdmin.register_page        "<%=        class_name        %>"        do
 
 
 
-                end
+
+
+
+
+
+
+
+
+                                                                #                your                content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
 
 
 
@@ -31,6 +63,14 @@ ActiveAdmin.register_page        "<%=        class_name        %>"        do
 
 
 end
+
+
+
+
+
+
+
+
 
 
 
