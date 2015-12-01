@@ -1,4 +1,4 @@
-require        'active_admin/abstract_view_factory'
+require                'active_admin/abstract_view_factory'
 
 
 
@@ -14,7 +14,6 @@ require        'active_admin/abstract_view_factory'
 
 
 
-module        ActiveAdmin
 
 
 
@@ -22,7 +21,6 @@ module        ActiveAdmin
 
 
 
-                class        ViewFactory        <        AbstractViewFactory
 
 
 
@@ -32,13 +30,13 @@ module        ActiveAdmin
 
 
 
+module                ActiveAdmin
 
 
 
 
 
 
-                                #        Register        Helper        Renderers
 
 
 
@@ -46,15 +44,14 @@ module        ActiveAdmin
 
 
 
-                                register                global_navigation:                        ActiveAdmin::Views::TabbedNavigation,
 
 
+                                class                ViewFactory                <                AbstractViewFactory
 
 
 
 
 
-                                                                                                                utility_navigation:                ActiveAdmin::Views::TabbedNavigation,
 
 
 
@@ -62,7 +59,6 @@ module        ActiveAdmin
 
 
 
-                                                                                                                site_title:                                                                                ActiveAdmin::Views::SiteTitle,
 
 
 
@@ -70,7 +66,6 @@ module        ActiveAdmin
 
 
 
-                                                                                                                unsupported_browser:        ActiveAdmin::Views::UnsupportedBrowser,
 
 
 
@@ -78,15 +73,14 @@ module        ActiveAdmin
 
 
 
-                                                                                                                action_items:                                                                ActiveAdmin::Views::ActionItems,
 
 
 
 
 
+                                                                #                Register                Helper                Renderers
 
 
-                                                                                                                title_bar:                                                                                        ActiveAdmin::Views::TitleBar,
 
 
 
@@ -94,15 +88,14 @@ module        ActiveAdmin
 
 
 
-                                                                                                                header:                                                                                                                ActiveAdmin::Views::Header,
 
 
 
 
 
 
+                                                                register                                global_navigation:                                                ActiveAdmin::Views::TabbedNavigation,
 
-                                                                                                                footer:                                                                                                                ActiveAdmin::Views::Footer,
 
 
 
@@ -110,7 +103,6 @@ module        ActiveAdmin
 
 
 
-                                                                                                                index_scopes:                                                                ActiveAdmin::Views::Scopes,
 
 
 
@@ -118,7 +110,7 @@ module        ActiveAdmin
 
 
 
-                                                                                                                blank_slate:                                                                        ActiveAdmin::Views::BlankSlate
+                                                                                                                                                                                                                                utility_navigation:                                ActiveAdmin::Views::TabbedNavigation,
 
 
 
@@ -134,7 +126,7 @@ module        ActiveAdmin
 
 
 
-                                #        Register        All        The        Pages
+                                                                                                                                                                                                                                site_title:                                                                                                                                                                ActiveAdmin::Views::SiteTitle,
 
 
 
@@ -142,7 +134,6 @@ module        ActiveAdmin
 
 
 
-                                register                index_page:        ActiveAdmin::Views::Pages::Index,
 
 
 
@@ -150,15 +141,14 @@ module        ActiveAdmin
 
 
 
-                                                                                                                show_page:                ActiveAdmin::Views::Pages::Show,
 
+                                                                                                                                                                                                                                unsupported_browser:                ActiveAdmin::Views::UnsupportedBrowser,
 
 
 
 
 
 
-                                                                                                                new_page:                        ActiveAdmin::Views::Pages::Form,
 
 
 
@@ -166,15 +156,14 @@ module        ActiveAdmin
 
 
 
-                                                                                                                edit_page:                ActiveAdmin::Views::Pages::Form,
 
 
+                                                                                                                                                                                                                                action_items:                                                                                                                                ActiveAdmin::Views::ActionItems,
 
 
 
 
 
-                                                                                                                layout:                                        ActiveAdmin::Views::Pages::Layout,
 
 
 
@@ -182,10 +171,10 @@ module        ActiveAdmin
 
 
 
-                                                                                                                page:                                                        ActiveAdmin::Views::Pages::Page
 
 
 
+                                                                                                                                                                                                                                title_bar:                                                                                                                                                                                ActiveAdmin::Views::TitleBar,
 
 
 
@@ -198,7 +187,226 @@ module        ActiveAdmin
 
 
 
-                end
+
+
+
+                                                                                                                                                                                                                                header:                                                                                                                                                                                                                                ActiveAdmin::Views::Header,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                footer:                                                                                                                                                                                                                                ActiveAdmin::Views::Footer,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                index_scopes:                                                                                                                                ActiveAdmin::Views::Scopes,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                blank_slate:                                                                                                                                                ActiveAdmin::Views::BlankSlate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                #                Register                All                The                Pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                register                                index_page:                ActiveAdmin::Views::Pages::Index,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                show_page:                                ActiveAdmin::Views::Pages::Show,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                new_page:                                                ActiveAdmin::Views::Pages::Form,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                edit_page:                                ActiveAdmin::Views::Pages::Form,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                layout:                                                                                ActiveAdmin::Views::Pages::Layout,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                page:                                                                                                                ActiveAdmin::Views::Pages::Page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
 
 
 
@@ -207,6 +415,14 @@ module        ActiveAdmin
 
 
 end
+
+
+
+
+
+
+
+
 
 
 
