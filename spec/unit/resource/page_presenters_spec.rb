@@ -1,4 +1,4 @@
-require    'rails_helper'
+require        'rails_helper'
 
 
 
@@ -6,7 +6,6 @@ require    'rails_helper'
 
 
 
-describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
@@ -14,11 +13,10 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-        let(:namespace){    ActiveAdmin::Namespace.new(ActiveAdmin::Application.new,    :admin)    }
 
+describe        ActiveAdmin::Resource::PagePresenters        do
 
 
-        let(:resource){    namespace.register(Post)    }
 
 
 
@@ -26,15 +24,13 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-        it    "should    have    an    empty    set    of    configs    on    initialize"    do
 
 
 
-                expect(resource.page_presenters).to    eq    ({})
 
 
 
-        end
+                let(:namespace){        ActiveAdmin::Namespace.new(ActiveAdmin::Application.new,        :admin)        }
 
 
 
@@ -42,75 +38,35 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-        it    "should    add    a    show    page    presenter"    do
+                let(:resource){        namespace.register(Post)        }
 
 
 
-                page_presenter    =    ActiveAdmin::PagePresenter.new
 
 
 
-                resource.set_page_presenter(:show,    page_presenter)
 
 
 
-                expect(resource.page_presenters[:show]).to    eq    page_presenter
 
 
 
-        end
 
 
 
+                it        "should        have        an        empty        set        of        configs        on        initialize"        do
 
 
 
 
-        it    "should    add    an    index    page    presenter"    do
 
 
 
-                page_presenter    =    ActiveAdmin::PagePresenter.new({as:    :table})
+                                expect(resource.page_presenters).to        eq        ({})
 
 
 
-                resource.set_page_presenter(:index,    page_presenter)
 
-
-
-                expect(resource.page_presenters[:index].default).to    eq    page_presenter
-
-
-
-        end
-
-
-
-
-
-
-
-        describe    "#get_page_presenter"    do
-
-
-
-
-
-
-
-                it    "should    return    a    page    config    when    set"    do
-
-
-
-                        page_presenter    =    ActiveAdmin::PagePresenter.new
-
-
-
-                        resource.set_page_presenter(:index,    page_presenter)
-
-
-
-                        expect(resource.get_page_presenter(:index)).to    eq    page_presenter
 
 
 
@@ -122,19 +78,43 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-                it    "should    return    a    specific    index    page    config    when    set"    do
 
 
 
-                        page_presenter    =    ActiveAdmin::PagePresenter.new
 
 
 
-                        resource.set_page_presenter(:index,    page_presenter)
+
+
+                it        "should        add        a        show        page        presenter"        do
 
 
 
-                        expect(resource.get_page_presenter(:index,    "table")).to    eq    page_presenter
+
+
+
+
+                                page_presenter        =        ActiveAdmin::PagePresenter.new
+
+
+
+
+
+
+
+                                resource.set_page_presenter(:show,        page_presenter)
+
+
+
+
+
+
+
+                                expect(resource.page_presenters[:show]).to        eq        page_presenter
+
+
+
+
 
 
 
@@ -146,11 +126,43 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-                it    "should    return    nil    when    no    page    config    set"    do
 
 
 
-                        expect(resource.get_page_presenter(:index)).to    eq    nil
+
+
+
+
+
+                it        "should        add        an        index        page        presenter"        do
+
+
+
+
+
+
+
+                                page_presenter        =        ActiveAdmin::PagePresenter.new({as:        :table})
+
+
+
+
+
+
+
+                                resource.set_page_presenter(:index,        page_presenter)
+
+
+
+
+
+
+
+                                expect(resource.page_presenters[:index].default).to        eq        page_presenter
+
+
+
+
 
 
 
@@ -162,7 +174,167 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 
-        end
+
+
+
+
+
+
+
+
+                describe        "#get_page_presenter"        do
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "should        return        a        page        config        when        set"        do
+
+
+
+
+
+
+
+                                                page_presenter        =        ActiveAdmin::PagePresenter.new
+
+
+
+
+
+
+
+                                                resource.set_page_presenter(:index,        page_presenter)
+
+
+
+
+
+
+
+                                                expect(resource.get_page_presenter(:index)).to        eq        page_presenter
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "should        return        a        specific        index        page        config        when        set"        do
+
+
+
+
+
+
+
+                                                page_presenter        =        ActiveAdmin::PagePresenter.new
+
+
+
+
+
+
+
+                                                resource.set_page_presenter(:index,        page_presenter)
+
+
+
+
+
+
+
+                                                expect(resource.get_page_presenter(:index,        "table")).to        eq        page_presenter
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                it        "should        return        nil        when        no        page        config        set"        do
+
+
+
+
+
+
+
+                                                expect(resource.get_page_presenter(:index)).to        eq        nil
+
+
+
+
+
+
+
+                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                end
+
+
+
+
+
+
+
+
 
 
 
@@ -171,6 +343,10 @@ describe    ActiveAdmin::Resource::PagePresenters    do
 
 
 end
+
+
+
+
 
 
 
