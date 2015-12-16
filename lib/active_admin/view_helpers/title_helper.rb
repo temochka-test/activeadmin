@@ -1,20 +1,4 @@
-module        ActiveAdmin
-
-
-
-
-
-
-
-                module        ViewHelpers
-
-
-
-
-
-
-
-                                module        TitleHelper
+module                ActiveAdmin
 
 
 
@@ -30,7 +14,7 @@ module        ActiveAdmin
 
 
 
-                                                def        title(_title)
+                                module                ViewHelpers
 
 
 
@@ -38,7 +22,6 @@ module        ActiveAdmin
 
 
 
-                                                                @page_title        =        _title
 
 
 
@@ -46,7 +29,104 @@ module        ActiveAdmin
 
 
 
-                                                end
+
+                                                                module                TitleHelper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                def                title(_title)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                @page_title                =                _title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                end
 
 
 
@@ -70,7 +150,7 @@ module        ActiveAdmin
 
 
 
-                end
+
 
 
 
@@ -79,6 +159,14 @@ module        ActiveAdmin
 
 
 end
+
+
+
+
+
+
+
+
 
 
 
