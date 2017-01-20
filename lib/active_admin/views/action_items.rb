@@ -1,4 +1,4 @@
-module        ActiveAdmin
+module                ActiveAdmin
 
 
 
@@ -6,7 +6,6 @@ module        ActiveAdmin
 
 
 
-                module        Views
 
 
 
@@ -15,6 +14,7 @@ module        ActiveAdmin
 
 
 
+                                module                Views
 
 
 
@@ -22,7 +22,6 @@ module        ActiveAdmin
 
 
 
-                                class        ActionItems        <        ActiveAdmin::Component
 
 
 
@@ -38,7 +37,6 @@ module        ActiveAdmin
 
 
 
-                                                def        build(action_items)
 
 
 
@@ -46,15 +44,14 @@ module        ActiveAdmin
 
 
 
-                                                                action_items.each        do        |action_item|
 
 
+                                                                class                ActionItems                <                ActiveAdmin::Component
 
 
 
 
 
-                                                                                span        class:        "action_item"        do
 
 
 
@@ -62,7 +59,6 @@ module        ActiveAdmin
 
 
 
-                                                                                                instance_exec(&action_item.block)
 
 
 
@@ -70,7 +66,139 @@ module        ActiveAdmin
 
 
 
-                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                def                build(action_items)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                action_items.each                do                |action_item|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                span                class:                "action_item"                do
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                instance_exec(&action_item.block)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -86,7 +214,15 @@ module        ActiveAdmin
 
 
 
-                                                end
+
+
+
+
+
+
+
+
+
 
 
 
@@ -118,15 +254,15 @@ module        ActiveAdmin
 
 
 
-                end
-
-
-
-
-
-
-
 end
+
+
+
+
+
+
+
+
 
 
 
