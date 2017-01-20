@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://wb.git.beanstalkapp.com/dploy-io.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
+
