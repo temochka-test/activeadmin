@@ -1,4 +1,4 @@
-ActiveAdmin.register_page                                "<%=                                class_name                                %>"                                do
+ActiveAdmin.register_page                                                                "<%=                                                                class_name                                                                %>"                                                                do
 
 
 
@@ -30,7 +30,6 @@ ActiveAdmin.register_page                                "<%=                   
 
 
 
-                                                                content                                do
 
 
 
@@ -62,8 +61,8 @@ ActiveAdmin.register_page                                "<%=                   
 
 
 
-                                                                                                                                #                                your                                content
 
+                                                                                                                                content                                                                do
 
 
 
@@ -94,7 +93,136 @@ ActiveAdmin.register_page                                "<%=                   
 
 
 
-                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                #                                                                your                                                                content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -127,6 +255,38 @@ ActiveAdmin.register_page                                "<%=                   
 
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
